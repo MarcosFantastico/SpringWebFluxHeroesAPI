@@ -24,19 +24,22 @@ public class HeroesData {
       .withPrimaryKey("id", "2")
       .withString("name", "Mulher Maravilha")
       .withString("universe", "dc comics")
-      .withNumber("films", 2);
+      .withNumber("films", 2)
+            .withString("sexo", "F");
 
     Item hero2 = new Item()
       .withPrimaryKey("id", "3")
       .withString("name", "Viúva negra")
       .withString("universe", "marvel")
-      .withNumber("films", 2);
+      .withNumber("films", 2)
+            .withString("sexo", "F");
 
     Item hero3 = new Item()
       .withPrimaryKey("id", "4")
       .withString("name", "Capitã marvel")
       .withString("universe", "marvel")
-      .withNumber("films", 2);
+      .withNumber("films", 2)
+            .withString("sexo","F");
 
     PutItemOutcome outcome1 = table.putItem(hero);
     PutItemOutcome outcome2 = table.putItem(hero2);
