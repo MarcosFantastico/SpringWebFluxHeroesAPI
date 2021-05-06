@@ -47,6 +47,12 @@ public class Heroes {
     this.films = films;
   }
 
+  public void setSexo(Character sexo){ this.sexo = sexo; }
+
+  public char getSexo(){ return this.sexo; }
+
+
+
   @Id
   @DynamoDBHashKey (attributeName = "id")
   private String id;
@@ -60,12 +66,16 @@ public class Heroes {
   @DynamoDBAttribute (attributeName = "films")
   private int films;
 
+  @DynamoDBAttribute(attributeName = "sexo")
+  private Character sexo;
 
-  public Heroes(String id, String name, String universe, int films) {
+
+  public Heroes(String id, String name, String universe, int films, char sexo) {
     this.id = id;
     this.name = name;
     this.universe = universe;
     this.films = films;
+    this.sexo = sexo;
   }
 
 }
